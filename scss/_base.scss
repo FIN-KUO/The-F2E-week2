@@ -1,0 +1,48 @@
+body{
+  color: map-get($map: $c_text, $key:primary_dark );
+  font-family: map-get($map: $font_family, $key: ch);
+  font-size: $fz_lg;
+};
+.wrap{
+  margin: 0 auto;
+  max-width: 425px;
+  @include pad{
+    max-width: 1023px
+  };
+  @include laptop{
+    max-width: 1440px;
+  };
+};
+.header{
+  padding: 26.05px 38px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include pad{
+    padding: 26.05px 125px 21.38px;
+  };
+  .logo{
+    width: 88.61px;
+    @include pad{
+      width: 130.75px;
+    };
+  };
+  a{
+    color: map-get($map: $c_text, $key:primary_dark );
+    line-height: 26px;
+  };
+};
+
+
+.bg_color1{
+  background: map-get($c_bg,color1);
+};
+.bg_color2{
+  background: map-get($c_text,primary_light);
+};
+.in_block{
+  display: none;
+  @include laptop{
+    display: block;
+  };
+};

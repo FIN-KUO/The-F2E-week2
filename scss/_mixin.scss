@@ -1,0 +1,55 @@
+﻿/*RWD*/
+@mixin mobile {
+  @media screen and (min-width : $sm) {
+      @content
+  }
+};
+@mixin pad {
+  @media screen and (min-width : $md) {
+      @content
+  }
+};
+@mixin laptop {
+  @media screen and (min-width : $lg) {
+      @content
+  }
+};
+@mixin table{
+  @media screen and (min-width : $xl){
+      @content
+  }
+};
+
+@mixin row-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};
+@mixin column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+};
+
+@mixin btn_linear($width , $height , $font-size ,$line-height,$border-radius){
+  @include row-center;
+  height: $height;
+  width: $width;
+  color: map-get($c_text,primary_light);
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  background: linear-gradient(180deg, #35A483 0%, #077854 100%);
+};
+@mixin btn($width , $height , $font-size ,$line-height,$border-radius){
+  @include row-center;
+  height: $height;
+  width: $width;
+  color: map-get($c_text,primary_light);
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  background: map-get($map: $c_text, $key: second);
+};

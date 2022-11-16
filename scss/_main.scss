@@ -1,0 +1,192 @@
+.main{
+  @include row-center;
+  &__right{
+    width: 355px;
+    @include row-center;
+    position: relative;
+    @include pad{
+      width: 684px;
+    };
+    .onload{
+      width: 299px;
+      padding: 46.5px 45px 108.5px;
+      @include column-center;
+      font-size: $fz_md;
+      line-height: 20px;
+      color: map-get($map: $c_text, $key: second);
+      border: 2px dashed #B7B7B7;
+      border-radius: 26px;
+      @include pad{
+        width: 547px;
+        padding: 76.5px 93.5px 158.5px;
+      };
+      .img_pdf{
+        width: 134px;
+        @include pad{
+          width: 225px;
+        };
+      };
+      input{
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      };
+      a{
+        @include btn_linear(209px,60px,18px,26px,16px);
+        margin: 20px 0 15px 0;
+        @include pad{
+          @include btn_linear(360px,75px,18px,26px,16px);
+          margin: 35px 0 15px 0;
+        };
+      };
+      
+    };  
+    .img_1{
+      position: absolute;
+      width: 355px;
+      left: 0px;
+      top: 481px;
+      @include pad{
+        width: 684px;
+        left: 0px;
+        top: 740px;
+      };
+    };
+    .img_2{
+      position: absolute;
+      width: 142px;
+      left: -1px;
+      top: 312px;
+      @include pad{
+        width: 273px;
+        left: -9.5px;
+        top: 414px;
+      };
+    };
+    .img_3{
+      position: absolute;
+      width: 97px;
+      left: 123px;
+      top: 357px;
+      @include pad{
+        width: 186px;
+        left: 229.5px;
+        top: 501px;
+      };
+    };
+    .img_4{
+      position: absolute;
+      width: 76px;
+      left: 204px;
+      top: 394px;
+      @include pad{
+        width: 147px;
+        left: 384.5px;
+        top: 573px;
+      };
+    };
+    .img_5{
+      position: absolute;
+      width: 108px;
+      left: 238px;
+      top: 319px;
+      @include pad{
+        width: 206px;
+        left: 451.5px;
+        top: 427px;
+      };
+    };
+    .img_6{
+      position: absolute;
+      width: 21px;
+      left: 250px;
+      top: 499px;
+      @include pad{
+        width: 41px;
+        left: 472.5px;
+        top: 775px;
+      };
+    };
+  };
+  
+
+};
+
+.overlay{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  transition: 1s 0.4s;
+};
+.control{
+  @include row-center;
+  padding: 16px;
+  .page{
+    @include row-center;
+    padding: 14px 16px;
+    border-radius: 16px;
+    margin-right: 9px;
+    a{
+      @include btn(30px , 30px , 12px , 12px , 12px);
+    };
+    .count{
+      font-size: $fz_base;
+      line-height: 19px;
+      color: map-get($map: $c_text, $key: primary_dark);
+      padding: 0 35.5px;
+      @include pad{
+        padding: 0 213.5px;
+      };
+    };
+  };
+  input{
+    @include btn_linear(130px,58px,18px,26px,16px);
+    @include pad{
+      width: 167px;
+    };
+  };
+};
+.canvasArea{
+  @include row-center;
+  margin: 0 16px;
+  .canvas{
+    width: 343px;
+    height: 457px;
+    @include pad{
+      width: 736px;
+      height: 814px;
+    };
+  };  
+};
+.btnGroup{
+  @include row-center;
+  border-radius: 16px;
+  margin: 24px 16px;
+  padding: 6.5px 0;
+  &__item{
+    @include column-center;
+    a{
+      @include row-center;
+      background: map-get($map: $c_bg, $key: color1);
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
+    };
+    span{       
+      font-size: $fz_sm;
+      line-height: 17px;
+      color: map-get($map: $c_text, $key: third);
+    };
+  };
+  &__item + &__item{
+    margin-left: 24px;
+  };
+};
