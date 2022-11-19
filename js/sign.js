@@ -98,7 +98,7 @@ saveBtn.addEventListener("click", saveImage);
 
 var animation = bodymovin.loadAnimation({
   container: document.getElementById('lottie'), // Required
-  path: '../image/GNsign_loading.json', // Required
+  path: './image/GNsign_loading.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true, // Optional
