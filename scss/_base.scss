@@ -7,10 +7,10 @@ body{
   margin: 0 auto;
   max-width: 425px;
   @include pad{
-    max-width: 1023px
+    max-width: 980px
   };
   @include laptop{
-    max-width: 1440px;
+    max-width: 1280px;
   };
 };
 .header{
@@ -32,7 +32,15 @@ body{
     line-height: 26px;
   };
 };
-
+.footer{
+  @include row-center;
+  font-size: $fz_sm;
+  line-height: 17px;
+  padding: 156px 0 10px 0;
+  @include pad{
+    padding-top: 295px;
+  };
+};
 
 .bg_color1{
   background: map-get($c_bg,color1);
@@ -45,4 +53,7 @@ body{
   @include laptop{
     display: block;
   };
+};
+.row-center{
+  @include row-center;
 };

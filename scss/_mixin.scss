@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 };
 
 @mixin btn_linear($width , $height , $font-size ,$line-height,$border-radius){

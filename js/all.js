@@ -19,6 +19,6 @@ selectFile.addEventListener("change", (e) => {
     fileReader.readAsDataURL(file);
   }
   
-  window.location.replace("loadingPDF.html")
+  window.location.href="signPage.html";
 });
 

@@ -125,6 +125,17 @@
   bottom:0;
   right:0;
   transition: 1s 0.4s;
+  @include column-center;
+  .lottie{
+    width: 140px;
+    height: 140px;
+  };
+  a{
+    margin-top: 213px;
+    @include pad{
+      margin-top: 69px;
+    };
+  };
 };
 .control{
   @include row-center;
@@ -147,8 +158,17 @@
       };
     };
   };
-  input{
+  .complete{
     @include btn_linear(130px,58px,18px,26px,16px);
+    @include pad{
+      width: 167px;
+    };
+  };
+  .home{
+    @include btn(130px,58px,18px,26px,16px);
+    background: map-get($c_text,primary_light);
+    color: map-get($c_text,second);
+    border: 1px solid map-get($c_text,second);
     @include pad{
       width: 167px;
     };
@@ -166,7 +186,7 @@
     };
   };  
 };
-.btnGroup{
+.pdf_btnGroup{
   @include row-center;
   border-radius: 16px;
   margin: 24px 16px;
@@ -185,8 +205,213 @@
       line-height: 17px;
       color: map-get($map: $c_text, $key: third);
     };
+    &:hover{
+      a{
+        background: linear-gradient(180deg, #35A483 0%, #077854 100%);
+        img{
+          fill: map-get($c_text,primary_light);
+        };        
+      };
+      span{
+        color: map-get($map: $c_text, $key: second);
+      };
+    };
   };
   &__item + &__item{
     margin-left: 24px;
   };
+};
+.selectBtn{
+  @include row-center;
+  width: 240px;
+  font-size: 16px;
+  line-height: 23px;
+  color: map-get($map: $c_text, $key: second);  
+  border-radius: 14px;
+  margin: 28px 0 53px;
+  @include pad{
+    width: 228px;
+  };
+  &__item{
+    width: 120px;
+    height: 40px;
+    @include row-center;   
+    @include pad{
+      width: 114px;
+    }; 
+  };
+  .active{
+    @include btn_linear(120px,40px,16px,23px,14px);
+  };
+  input{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  };
+};
+.selectColor{
+  @include row-center;
+  li{
+    @include row-center;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    margin-right: 15px;
+  };
+  &__item{
+    height: 34.77px;
+    width: 34.77px;
+    border-radius: 100%;
+  };
+  .black{
+    background: #000000;
+    &_active{
+      border: 1px solid #000000;
+    };
+  };
+  .blue{
+    background: #0014C7;
+    &_active{
+      border: 1px solid #0014C7;
+    };
+  };
+  .red{
+    background: #CA0000;
+    &_active{
+      border: 1px solid #CA0000;
+    };
+  };
+};
+.canvasName{
+  width: 343px;
+  height: 200px;
+  border-radius: 26px;
+  margin: 16px 0 25px;
+  @include pad{
+    width: 592px;
+    height: 224px;
+  };
+};
+.sign_btnGroup{
+  @include row-center;
+  .clear{
+    @include btn(165.5px,56px,18px,26px,16px);
+    background: map-get($c_text,primary_light);
+    color: map-get($c_text,second);
+    border: 1px solid map-get($c_text,second);
+    margin-right: 11.5px;
+    @include pad{
+      width: 286px;
+    };
+  };
+  .save{
+    @include btn_linear(165.5px,56px,18px,26px,16px);
+    @include pad{
+      width: 286px;
+    };
+  };
+};
+.inputSign{
+  @include column-center;
+  border-radius: 16px;
+  position:fixed;
+  top: 181px;
+  left: 50%;
+  margin-left: -171.5px;
+  width: 343px;
+  padding: 16px;
+  @include pad{
+    top: 282px;
+  };
+  
+  p{
+    color: map-get($map: $c_text, $key: second);
+    line-height: 26px;
+  };
+  &__item{
+    @include row-center;
+    margin: 12px 0 ;
+    img{
+      background: map-get($c_text,primary_light);
+      width: 271px;
+      height: 61px;
+      border-radius: 16px;
+      margin-right: 21px;
+    };
+    .remove{
+      color: map-get($map: $c_text, $key: second);
+    };    
+  };
+  .star{
+    display: flex;
+    justify-content: flex-start;
+    width: 311px;
+  };
+  .addSign{
+    color: map-get($map: $c_text, $key: second);
+    font-size: $fz_base;
+    line-height: 23px;
+  };
+};
+.inputTxt{
+  @include column-center;
+  border-radius: 16px;
+  position:fixed;
+  top: 181px;
+  left: 50%;
+  margin-left: -171.5px;
+  width: 343px;
+  padding: 24px 29.5px;
+  @include pad{
+    top: 282px;
+  };
+  textarea{
+    width: 284px;
+    height: 84px;
+    font-size: 14px;
+    line-height: 21px;
+  };  
+};
+.txt_btnGroup{
+  @include row-center;
+  margin-top: 16px;
+  .cancel{
+    @include btn(136px,56px,18px,26px,16px);
+    background: map-get($c_bg,color1);
+    color: map-get($c_text,second);
+    border: 1px solid map-get($c_text,second);
+    margin-right: 12px;
+  };
+  .input{
+    @include btn(136px,56px,18px,26px,16px);
+  };
+};
+.noSign{
+  @include column-center;
+  border-radius: 16px;
+  position:fixed;
+  top: 181px;
+  left: 50%;
+  margin-left: -171.5px;
+  width: 343px;
+  padding: 23px 57px;
+  @include pad{
+    top: 282px;
+  };
+  p{
+    line-height: 26px;
+    margin-bottom: 28px;
+  };
+  a{
+    @include btn(229px,56px,18px,26px,16px);
+  };
+};
+.download{
+  @include btn_linear(260px,56px,18px,26px,16px);
+  margin: 32px 0;
 };
